@@ -14,6 +14,7 @@ function App() {
         <h1>Data <span>tailored</span> to your needs</h1>
         <button>learn more</button>
       </div>
+       <span><img className='hero-phone' src='/images/image-hero.webp' alt='hero img'/></span>
      </section>
 
      <section id='company-info'>
@@ -35,7 +36,7 @@ function App() {
           </div>
       </div>
       <div>
-        <span>3</span>
+        <span>5</span>
         <div>
         <h2>Always affordable</h2>
         <p>Always affordable pricing that scales with your business. Get 

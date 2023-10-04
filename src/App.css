@@ -7,7 +7,7 @@
   --white: rgba(255,255, 255);
 
   --heading: 'Fraunces', serif;
-  --headingl:80px;
+  --headingl:70px;
   --heading-line-spacingl:80px;
   --headingm:56px;
   --heading-line-spacingm: 64px;
@@ -25,7 +25,6 @@
   margin:0;
   padding:0;
   box-sizing: border-box;
-  /* background-color: pink; */
 }
 #app{
   /* max-width: 1500px; */
@@ -34,7 +33,6 @@
   font-family: var(--body-font);
   font-size: var(--body-font);
   color:var(--primary);
-  /* outline:5px solid black; */
 }
 section:not(#hero){
   width:93%;
@@ -89,9 +87,12 @@ button::first-letter, h3::first-letter{
   width:fit-content;
   background-color: transparent;
 }
+#hero .hero-phone{
+  display: none;
+}
  #app #hero{
   width:100%;
-  padding:2rem 0 5rem;
+  padding:2.25rem 1rem;
   /* margin-bottom:15rem;
   position: relative; */
   background-color: var(--background);
@@ -113,7 +114,10 @@ button::first-letter, h3::first-letter{
   line-height: 6.5rem;
   /* font-size: var(--headingm); */
 }
-
+#hero h1 {
+  font-size: var(--headingl);
+  line-height: var(--heading-line-spacingl);
+}
 #hero div span{
   border-bottom: 3px solid rgba(68, 255, 161) ;
 }
@@ -180,12 +184,18 @@ margin: 3rem 1rem 0;
       position: relative;
       background:
         url("/images/bg-pattern-3.svg") -4rem center no-repeat,
-        url("/images/bg-pattern-2.svg") right 270px  no-repeat,
-        url('/images/image-hero.webp') 100px 400px no-repeat;
-      background-size: 140px, 100px, 300px;
+        url("/images/bg-pattern-2.svg") right 270px  no-repeat;
+      background-size: 140px, 100px;
       background-color: var(--background);
     }
-  
+        #app #hero .hero-phone {
+          height: 250px;
+          position: absolute;
+          z-index: 2;
+          left: 10%;
+          margin-top: 5rem;
+          display: flex;
+        }
     #hero::after {
       content: url("/images/wave.svg");
       bottom: 0;
@@ -195,6 +205,7 @@ margin: 3rem 1rem 0;
     }
 #app #company-info{
     text-align: left;
+    padding-top: 0;
 }
 #company-info>div:nth-child(1n) {
   display: flex;
@@ -221,15 +232,22 @@ section:nth-child(3)>img{
 @media (width >  40rem) {
   #app #hero {
       min-height: 80dvh;
-      padding: 2rem 0 0;
-      margin-bottom: 10rem;
+      padding: 4rem 0 0;
+      margin-bottom: 14rem;
       position: relative;
       background: 
        url("/images/bg-pattern-3.svg")  -4rem center no-repeat, 
-      url("/images/bg-pattern-2.svg") right bottom no-repeat,
-      url('/images/image-hero.webp') 300px 400px no-repeat;
-      background-size: auto, auto, 800px;
+      url("/images/bg-pattern-2.svg") right bottom no-repeat;
+      background-size: auto, auto;
       background-color: var(--background);
+    }
+    #app #hero .hero-phone{
+      height:390px;
+      position: absolute;
+      z-index: 2;
+      left:30%;
+      margin-top: 2rem;
+      display: flex;
     }
   
   #hero::after {
@@ -237,7 +255,7 @@ section:nth-child(3)>img{
       bottom: 0;
       position: absolute;
       height:.15rem;
-      width: 100dvw;
+      width: 100%;
     }
     #hero nav{
       width:80%;
