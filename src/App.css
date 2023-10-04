@@ -28,7 +28,7 @@
   /* background-color: pink; */
 }
 #app{
-  max-width: 1500px;
+  /* max-width: 1500px; */
   display: grid;
   place-items: center;
   font-family: var(--body-font);
