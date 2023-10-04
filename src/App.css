@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Manrope&display=swap');
+:root{
+  --background:rgba(36,5, 62);
+  --accent: rgba(68,255,161);
+  --primary: rgb(88,77,98);
+  --offwhite: rgba(253,250,255);
+  --white: rgba(255,255, 255);
+
+  --heading: 'Fraunces', serif;
+  --headingl:80px;
+  --heading-line-spacingl:80px;
+  --headingm:56px;
+  --heading-line-spacingm: 64px;
+  --headings:32px;
+  --heading-line-spacings: 40px;
+  --body-font: 'Manrope', sans-serif;
+  --body:18px;
+  --body-line-spacingl: 32px;
+  --get-access-padding: 2rem 5rem;
+  --get-access-paddingm: 2rem;
+  --get-access-align:left;
+}
+
+* , body , html{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  /* background-color: pink; */
+}
+#app{
+  max-width: 1500px;
+  display: grid;
+  place-items: center;
+  font-family: var(--body-font);
+  font-size: var(--body-font);
+  color:var(--primary);
+  /* outline:5px solid black; */
+}
+section:not(#hero){
+  width:93%;
+  padding: 5rem 0;
+  margin:.5rem 0;
+
+  display: grid;
+  place-content: center;
+  text-align: center; /* section 2 and 3 needs to be left after tablet */
+}
+button:not(.secondarybtn){
+  color: var(--background);
+  background-color: var(--accent);
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight:700;
+  line-height: 2rem;
+    /* 177.778% */
+  letter-spacing: -0.01125rem;
+  border:1px solid transparent;
+
+  width: 11.875rem;
+  height: 3.8125rem;
+  margin-top:2rem;
+}
+button:hover:not(.secondarybtn){
+  cursor: pointer;
+  color:var(--accent);
+  background-color: transparent;
+  border:3px solid var(--accent);
+
+  transition: 2s;
+}
+.secondarybtn{
+  color:var(--white);
+  border:1px solid transparent;
+  border-bottom:3px solid rgba(68, 255, 161);
+  outline:1px solid transparent;
+  /* border:3px solid transparent; */
+  background-color: transparent;
+  cursor: pointer;
+}
+.secondarybtn:hover{
+  color:var(--accent);
+}
+button::first-letter, h3::first-letter{
+  text-transform: capitalize;
+}
+#app li > button{
+  padding:0;
+  margin:0;
+  width:fit-content;
+  background-color: transparent;
+}
+ #app #hero{
+  width:100%;
+  padding:2rem 0 5rem;
+  /* margin-bottom:15rem;
+  position: relative; */
+  background-color: var(--background);
+}
+#app nav{
+  width:95%;
+  display: flex;
+  margin:0 auto;
+  justify-content: space-between;
+}
+#hero div{
+  /* width:39rem; */
+  margin-top: 2rem;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color:var(--white);
+  font-family: var(--heading);
+  line-height: 6.5rem;
+  /* font-size: var(--headingm); */
+}
+
+#hero div span{
+  border-bottom: 3px solid rgba(68, 255, 161) ;
+}
+/* #hero::after{
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#24053E" fill-opacity="1" d="M0,256L80,261.3C160,267,320,277,480,282.7C640,288,800,288,960,261.3C1120,235,1280,181,1360,154.7L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
+} */
+#company-info span{
+display: grid;
+place-content: center;
+margin:2rem auto;
+padding:2rem;
+height:2rem;
+width:2rem;
+line-height: 2rem;
+border-radius: 50%;
+border: 1px solid var(--Davys-Grey, #584D62);
+}
+#company-info h2{
+  color:var(--background);
+  font-family: var(--heading);
+  line-height: var(--heading-line-spacings);
+}
+
+#app .about-us{
+  /* width:100%; */
+  height: 515px;
+  position: relative;
+  padding:0;
+  margin:0;
+  display: grid;
+  align-content:flex-end;
+}
+#app #get-access {
+  color: var(--white);
+  background-color: var(--background);
+  padding:var(--get-access-paddingm);
+  text-align: center;
+}
+#get-access h3 {
+      font-family: --heading;
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 4rem;
+    }
+section:nth-child(3) > div > img{
+  height:16rem;
+  width:16rem;
+  top:0;
+  z-index: -1;
+  position: absolute;
+}
+#footer li{
+ list-style-type: none;
+ display: inline-block;
+margin: 3rem 1rem 0;
+}
+
+@media (width > 30rem) and (width < 40rem) {
+  #app #hero {
+      min-height: 80dvh;
+      padding: 2rem 0 0;
+      margin-bottom: 10rem;
+      position: relative;
+      background:
+        url("/images/bg-pattern-3.svg") -4rem center no-repeat,
+        url("/images/bg-pattern-2.svg") right 270px  no-repeat,
+        url('/images/image-hero.webp') 100px 400px no-repeat;
+      background-size: 140px, 100px, 300px;
+      background-color: var(--background);
+    }
+  
+    #hero::after {
+      content: url("/images/wave.svg");
+      bottom: 0;
+      position: absolute;
+      height: .15rem;
+      width: 100dvw;
+    }
+#app #company-info{
+    text-align: left;
+}
+#company-info>div:nth-child(1n) {
+  display: flex;
+}
+#company-info span{
+  margin-right: 1rem;
+}
+#app section:nth-child(3){
+  width:100%;
+  height:420px;
+  justify-content: right;
+}
+section:nth-child(3)>img{
+  left:0;
+}
+#app #get-access{
+  max-width:27rem;
+  text-align: left;
+  background-image: url('/images/bg-pattern-3.svg');
+  background-repeat: no-repeat;
+  background-position: 250px 100px;
+  }
+}
+@media (width >  40rem) {
+  #app #hero {
+      min-height: 80dvh;
+      padding: 2rem 0 0;
+      margin-bottom: 10rem;
+      position: relative;
+      background: 
+       url("/images/bg-pattern-3.svg")  -4rem center no-repeat, 
+      url("/images/bg-pattern-2.svg") right bottom no-repeat,
+      url('/images/image-hero.webp') 300px 400px no-repeat;
+      background-size: auto, auto, 800px;
+      background-color: var(--background);
+    }
+  
+  #hero::after {
+      content: url("/images/wave.svg");
+      bottom: 0;
+      position: absolute;
+      height:.15rem;
+      width: 100dvw;
+    }
+    #hero nav{
+      width:80%;
+    }
+  #hero div{
+    width : 39rem;
+    margin: auto;
+    font-size: var(--headingm);
+  }
+  #app #company-info{
+    display: flex;
+  }
+  #company-info div{
+    width:22.125rem;
+    margin:0 1rem ;
+  }
+  #app #get-access {
+    width: 45rem;
+    height:25rem;
+    padding:var(--get-access-padding);
+    text-align: var(--get-access-align);
+    background-image: url('/images/bg-pattern-3.svg');
+    background-repeat: no-repeat;
+    background-position: 350px 230px;
+  }
+  #get-access h3{
+      font-size: 3.5rem;
+      padding:2rem 0 1rem;
+  }
+  #get-access p {
+    line-height: 2rem;
+    font-size: 1.05rem;
+  }
+  #app .about-us{
+    height:525px;
+    width: 1000px;
+    justify-content: right;
+  }
+  section:nth-child(3) > div > img {
+    left: 0;
+    height:28rem;
+    width:28rem;
+  }
+}
